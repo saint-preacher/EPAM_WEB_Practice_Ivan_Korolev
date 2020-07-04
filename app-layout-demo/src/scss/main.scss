@@ -1,0 +1,64 @@
+*{
+    margin: 0; // margin - внешние отступы элемента
+    padding: 0 0 0 0; // padding - внутренние отступы элемента
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.control-panel .control-item-list {
+    font-size: 0;
+    display: flex;
+    box-shadow: 0 -1px 5px 0 #ddd;
+}
+.control-panel .control-item-list .control-item {
+    display: inline-block;
+    padding: 10px 0px;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+
+.control-panel .control-item-list .control-item:hover {                         // hover - элемент получает псевдокласс hover, если на него наведен курсор; 
+    cursor: pointer;
+    color: #1331b6;
+}
+
+.control-panel .control-item-list .control-item.active {                  
+    color: #3498db;
+}
+
+.control-panel .control-item-list .control-item .control-item-icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.control-panel .control-item-list .control-item:hover .control-item-icon {
+    
+    filter: invert(10%) sepia(69%) saturate(7485%) hue-rotate(237deg) brightness(84%) contrast(94%);
+}
+
+.control-panel .control-item-list .control-item.active .control-item-icon {
+    filter: invert(65%) sepia(44%) saturate(2736%) hue-rotate(177deg) brightness(84%) contrast(107%);
+}
+
+.all-voices-icon {
+    background-image: url("../img/icons/all-voices-icon.svg");
+}
+
+.microphone-icon {
+    background-image: url("../img/icons/mic-icon.svg");
+}
+
+.stream-icon {
+    background-image: url("../img/icons/stream-icon.svg");
+}
